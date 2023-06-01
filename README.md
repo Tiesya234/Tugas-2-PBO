@@ -1,78 +1,21 @@
 # Tugas-2-PBO
-# 1. Mengimplementasikan kelas Mahasiswa, Jurusan, dan Universitas
-class Mahasiswa: 
-    #pendefinisian kelas 'Mahasiswa'
-    def __init__(self, nama, nim, jurusan): 
-        #method yang digunakan untuk menginisialisasi objek Mahasiswa dengan atribut nama, nim dan jurusan
-        self.nama = nama
-        self.nim = nim
-        self.jurusan = jurusan
-    
-    def tampilkan_info(self): 
-        #method ini digunakan untuk mencetak informasi tentang Mahasiswa berupa nama, nim dan jurusan
-        print("Nama:", self.nama)
-        print("NIM:", self.nim)
-        print("Jurusan:", self.jurusan.NamaJurusan)
+# Membuat Kode Program Sederhana untuk mengelola data mahasiswa di sebuah universitas
+Pembuat kode program sederhana untuk mengelola data mahasiswa di sebuah universitas dapat menggunakan konsep OOP atau Object Oriented Programming yang menggunakan bahasa pemrogaram python. Berikut ini adalah penjelasan setelah kode program berhasil dibuat:
+1. Kode program yang telah dibuat tersebut dapat mengilustrasikan bagaimana tiga kelas objek (Mahasiswa, Jurusan, dan Univeritas) saling berhubungan dalam kontek pengelolaan data mahasiswa di sebuah universitas.
 
+2. Kelas Mahasiswa merepresentasikan entitas mahasiswa dengan atribut Nama, NIM, dan Jurusan. Dengan menggunakan metode 'tampilkan_info' informasi tentang mahasiswa dapat dicetak.
 
-class Jurusan:
-    #pendefinisian kelas 'Jurusan'
-    def __init__(self, nama_jurusan):
-        #method yang digunakan untuk menginisialisasi objek Jurusan dengan atribun nama_jurusan dan Daftar_Mahasiswa
-        self.NamaJurusan = nama_jurusan
-        self.Daftar_Mahasiswa = []
-    
-    def tambah_mahasiswa(self, mahasiswa):
-        #method yang digunakan untuk menambahkan objek Mahasiswa ke dalam Daftar_Mahasiswa
-        self.Daftar_Mahasiswa.append(mahasiswa) #menggunakan append untuk menambahkannya
-    
-    def tampilkan_daftar_mahasiswa(self):
-        # method yang digunakan untuk mencetak daftar mahasiswa yang terdaftar dalam jurusan
-        if len(self.Daftar_Mahasiswa) == 0:
-            #jika Daftar_Mahasiswa kosong maka akan mencetak pesan tidak ada mahasiswa yang terdaftar dalam jurusan ini
-            print("Tidak ada mahasiswa terdaftar dalam jurusan", self.NamaJurusan)
-        else:
-            print("Daftar mahasiswa dalam jurusan", self.NamaJurusan + ":")
-            for mahasiswa in self.Daftar_Mahasiswa:
-                #jika Daftar_Mahasiswa tidak kosong maka akan mencetak daftar mahasiswa dengan nama dan nim dari setiap mahasiswa
-                print(mahasiswa.nama, "-", mahasiswa.nim)
+3. Kelas Jurusan merepresentasikan entitas jurusan dengan atribut nama_jurusan dan Daftar_Mahasiswa. Dengan menggunakan metode 'tambah_mahasiswa' dapat menambahkan objek Mahasiswa ke dalam daftar mahasiwa di jurusan. Lalu metode 'tampilkan_daftar_mahasiswa' digunakan untuk mencetak daftar mahasiswa yang terdaftar dalam jurusan tersebut.
 
+4. Kelas Universitas merepresentasikan entitas universitas dengan atribut namaUniveritas dan DaftarJurusan. Dengan menggunakan metode 'tambah_jurusan' dapat menambahkan objek jurusan ke dalam daftar jurusan di universitas. Lalu metode 'tampilkan_daftar_jurusan' dapat digunakan untuk mencetak daftar jurusan yang ada di univeritas.
 
-class Universitas:
-    #pendefinisian kelas 'Universitas'
-    def __init__(self, namaUniversitas):
-        #method yang digunakan untuk menginisialisasi objek Universitas dengan atribut namaUNiversitas dan Daftar_Jurusan
-        self.NamaUniversitas = namaUniversitas
-        self.Daftar_Jurusan = []
-    
-    def tambah_jurusan(self, jurusan):
-        # method yang digunakan untuk menambahkan objek Jurusan ke dalam Daftar_Jurusan univeristas
-        self.Daftar_Jurusan.append(jurusan) #menggunakan append untuk menambahkannya
-    
-    def tampilkan_daftar_jurusan(self):
-        #method yang digunakan untuk mecetak daftar jurusan yang ada dalam universitas
-        if len(self.Daftar_Jurusan) == 0:
-            #jika Daftar_Jurusan kosong, maka akan mencetak pesan bahwa tidak ada jurusan yang terdafatar dalam universitas ini
-            print("Tidak ada jurusan terdaftar dalam universitas", self.NamaUniversitas)
-        else:
-            print("Daftar jurusan dalam universitas", self.NamaUniversitas + ":")
-            for jurusan in self.Daftar_Jurusan:
-                #jika Daftar_Jurusan tidak kosong, maka akan mencetak nama jurusan dari setiap objek jurusan
-                print(jurusan.NamaJurusan)
+5. Objek-objek dibuat dengan menggunakan kelas-kelas yang telah didefinisikan. Objek Mahasiswa diinisialisasi dengan nama, NIM, dan objek Jurusan. Objek Jurusan diinisialisasi dengan nama jurusan. Objek Universitas diinisialisasi dengan nama universitas.
 
-# 2. membuat objek Universitas dengan nama "XYZ University"
-universitas_xyz = Universitas("XYZ University")
+6. Objek-objek yang telah dibuat tersebut dapat saling berhubungan dengan menggunakan metode-metode yang telah didefinisikan. Objek Mahasiswa ditambahkan ke dalam daftar mahasiswa di objek Jurusan menggunakan metode tambah_mahasiswa. Objek Jurusan ditambahkan ke dalam daftar jurusan di objek Universitas menggunakan metode tambah_jurusan.
 
-# 3. membuat objek Jurusan dengan nama "Teknik Informatika" dan tambahkan ke dalam Universitas XYZ
-jurusan_ti = Jurusan("Teknik Informatika")
-universitas_xyz.tambah_jurusan(jurusan_ti)
+7. Selanjutnya dengan menggunakan metode tampilkan_daftar_jurusan pada objek Universitas dapat mencetak daftar jurusan yang ada di universitas. Metode tampilkan_daftar_mahasiswa pada objek Jurusan digunakan untuk mencetak daftar mahasiswa yang terdaftar dalam jurusan.
 
-# 4. membuat objek Mahasiswa dan masukkan ke dalam Jurusan Teknik Informatika di Universitas XYZ
-mahasiswa_Tiesya = Mahasiswa("Tiesya Andriani Ramadhanti", "G1A022014", jurusan_ti)
-jurusan_ti.tambah_mahasiswa(mahasiswa_Tiesya)
+8. Dengan menggunakan kelas-kelas objek, kita dapat mengelola data mahasiswa dan jurusan di universitas dengan mudah. Kita dapat menambahkan mahasiswa baru ke dalam jurusan, menampilkan informasi mahasiswa, serta melihat daftar jurusan yang ada di universitas.
 
-# 5. menampilkan daftar jurusan di Universitas XYZ
-universitas_xyz.tampilkan_daftar_jurusan()
-
-# 6. menampilkan daftar mahasiswa yang terdaftar dalam Jurusan Teknik Informatika di Universitas XYZ
-jurusan_ti.tampilkan_daftar_mahasiswa()
+# Kesimpulannya
+Dalam keseluruhan kode program yang telah dibuat ini, dapat memberikan contoh tentang bagaimana kita dapat menggunakan PBO dan bahasa pemrograman python untuk mengelola data mahasiswa di sebuah universitas
